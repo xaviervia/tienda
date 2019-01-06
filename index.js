@@ -1,4 +1,4 @@
-const { fromJS, isImmutable, List, Map } = require('immutable')
+const { fromJS, isImmutable, List } = require('immutable')
 
 const createStore = (update = x => x, initialState = undefined, ...subscriptions) => {
     const store = {
@@ -21,11 +21,11 @@ const createStore = (update = x => x, initialState = undefined, ...subscriptions
                 const currentValue = store.state.getIn(pattern)
                 if (isImmutable(currentValue) && isImmutable(newValue)) {
                     if (!currentValue.equals(newValue)) {
-                        effect(newValue, immutableNewState)
+                        effect(newValue, immutableNewState, pattern)
                     }
                 } else {
                     if (currentValue !== newValue) {
-                        effect(newValue, immutableNewState)
+                        effect(newValue, immutableNewState, pattern)
                     }
                 }
             }

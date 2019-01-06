@@ -192,5 +192,22 @@ module.exports = [
             )
         },
         shouldEqual: 1
+    },
+    {
+        description: 'get also the original subscription path',
+        test: (check) => {
+            const { subscribe, send } = createStore()
+
+            send([
+                [2]
+            ])
+
+            subscribe([0, 0], (_, __, subscription) => check(subscription))
+
+            send([
+                [1]
+            ])
+        },
+        shouldEqual: fromJS([0, 0])
     }
 ]
