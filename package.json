@@ -1,0 +1,35 @@
+{
+  "name": "tienda",
+  "version": "0.0.1",
+  "description": "Store with fast subscriptions powered by Immutable.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "washington test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xaviervia/tienda.git"
+  },
+  "keywords": [
+    "store",
+    "immutable",
+    "subscription",
+    "pubsub",
+    "eventsourcing",
+    "dispatch",
+    "events",
+    "state"
+  ],
+  "author": "Fernando Via Canel <fernando.via@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xaviervia/tienda/issues"
+  },
+  "homepage": "https://github.com/xaviervia/tienda#readme",
+  "dependencies": {
+    "immutable": "^4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "washington": "^2.0.0"
+  }
+}
